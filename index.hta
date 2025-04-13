@@ -16,15 +16,11 @@
 
 <body>
     <h3>File Editor</h3>
-    <div>
-        <label  for="directoryInput">Directory:</label><br>
-        <input style="width: 80%;" type="text" id="directoryInput" placeholder="e.g., C:\" value="C:\"><br>
-        <button onclick="loadFileList()">Load Files</button>
-    </div>
 
     <div>
         <label for="filterInput">Filter:</label>
         <input type="text" id="filterInput" onkeyup="loadFileList()">
+        <button onclick="loadFileList()">Load Files</button>
     </div>
     
     <div>

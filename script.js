@@ -1,5 +1,9 @@
+var shell = new ActiveXObject("WScript.Shell")
+var env = shell.Environment("USER")
+var Dep_Folder_Path = env("Dep_Folder_Path")
+
 function loadFileList(){
-    var directory = document.getElementById("directoryInput").value
+    var directory = Dep_Folder_Path
     var filterText = document.getElementById("filterInput").value.toLowerCase()
     var fileList = document.getElementById("fileList")
 
