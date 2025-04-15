@@ -196,5 +196,32 @@ function refreshDepList(){
 
 
 function generateNewFile(){
+    var fileName = document.getElementById("filePathInput").value
+    
+    var filePath = Dep_Folder_Path + "\\" + fileName
 
+    
+
+    if(fileName.substring(fileName.length - 4) !== ".csv"){
+        filePath = filePath + ".csv"
+    } 
+    try{
+        var fileSysObj = new ActiveXObject("Scripting.FileSystemObject")
+        var file = fileSysObj.CreateTextFile(filePath, true) // overwrites file
+
+        if(!fileSysObj.FileExists(filePath)){
+            var newFile = fileSysObj.CreateTextFile(filePath, true)
+            newFile.WriteLine("Dep info here")
+            newFile.Close()
+        }
+        
+        file.Write(document.getElementById("editor").value)
+        file.Close()
+
+        addFileToList(fileName)
+        
+        alert("File created successfully!")
+    } catch(e){
+        alert("Error saving file: " + e.message)
+    }
 }
