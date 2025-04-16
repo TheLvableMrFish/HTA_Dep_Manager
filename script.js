@@ -10,6 +10,9 @@ var txtPath = currentDir + "\\depList.txt"
 
 // Load file list from the depList.txt from the curr directory 
 window.onload = function (){
+    if(!Dep_Folder_Path){
+        alert("Dep_Folder_Path environment variable is not set")
+    }
     GenerateDepList()
 }
 
@@ -86,8 +89,8 @@ function loadFile(){
     var fileName = document.getElementById("filePathInput").value
     var filePath = Dep_Folder_Path + "\\" + fileName + ".csv"
     
-    if(filePath === ""){
-        alert("Please enter or select a file path.")
+    if(fileName === ""){
+        alert("Please enter or select a file name.")
         return
     }
 
@@ -114,12 +117,14 @@ function loadFile(){
 
 function saveFile(){
     var fileName = document.getElementById("filePathInput").value
-    if(filePath === ""){
-        alert("Please enter or select a file path.")
-        return
-    }
+    
     
     var filePath = Dep_Folder_Path + "\\" + fileName
+
+    if(fileName === ""){
+        alert("Please enter or select a file Name.")
+        return
+    }
 
     if(fileName.substring(fileName.length - 4) !== ".csv"){
         filePath = filePath + ".csv"
@@ -197,30 +202,34 @@ function refreshDepList(){
 
 function generateNewFile(){
     var fileName = document.getElementById("filePathInput").value
+
     
+    if(fileName.substring(fileName.length - 4) !== ".csv"){
+        fileName += ".csv"
+    }
+
     var filePath = Dep_Folder_Path + "\\" + fileName
 
-    
-
-    if(fileName.substring(fileName.length - 4) !== ".csv"){
-        filePath = filePath + ".csv"
-    } 
     try{
         var fileSysObj = new ActiveXObject("Scripting.FileSystemObject")
-        var file = fileSysObj.CreateTextFile(filePath, true) // overwrites file
-
+        
         if(!fileSysObj.FileExists(filePath)){
             var newFile = fileSysObj.CreateTextFile(filePath, true)
-            newFile.WriteLine("Dep info here")
+
+            if(document.getElementById("editor").value === ""){
+                newFile.WriteLine("Dep info here")
+            } else {
+                newFile.Write(document.getElementById("editor").value)
+            }
+
             newFile.Close()
+            addFileToList(fileName)
+            alert("File created successfully!")
+
+        } else {
+            alert("File alread exists")
         }
         
-        file.Write(document.getElementById("editor").value)
-        file.Close()
-
-        addFileToList(fileName)
-        
-        alert("File created successfully!")
     } catch(e){
         alert("Error saving file: " + e.message)
     }
