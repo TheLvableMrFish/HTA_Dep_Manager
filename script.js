@@ -118,17 +118,17 @@ function loadFile(){
 function saveFile(){
     var fileName = document.getElementById("filePathInput").value
     
-    
-    var filePath = Dep_Folder_Path + "\\" + fileName
-
     if(fileName === ""){
         alert("Please enter or select a file Name.")
         return
     }
 
     if(fileName.substring(fileName.length - 4) !== ".csv"){
-        filePath = filePath + ".csv"
+        fileName = fileName + ".csv"
     } 
+
+    var filePath = Dep_Folder_Path + "\\" + fileName
+
     try{
         var fileSysObj = new ActiveXObject("Scripting.FileSystemObject")
         var file = fileSysObj.CreateTextFile(filePath, true) // overwrites file
@@ -142,6 +142,7 @@ function saveFile(){
         alert("Error saving file: " + e.message)
     }
 }
+
 function addFileToList(fileName){
     try{
         var exists = false
