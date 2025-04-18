@@ -15,8 +15,6 @@
 </head>
 
 <body>
-    <h3>File Editor</h3>
-
     <div>
         <label for="filterInput">Filter:</label>
         <input type="text" id="filterInput" onkeyup="loadFileList()" disabled>
@@ -24,8 +22,10 @@
     </div>
     
     <div>
-        <label for=fileList">Files:</label><br/>
-        <select id="fileList" size="10" style="width: 80%;" onclick="selectFileFromList()"></select>
+        <label class="filter-input" for="fileList">Files:</label><br/>
+        <div class="dep-list-container">
+            <select class="dep-list" id="fileList" size="10" style="width: 99%;" onclick="selectFileFromList()"></select>
+        </div>
     </div>
 
     <div>

@@ -8,5 +8,17 @@ html, body{
     width: 100%;
 }
 
+.dep-list-container{
+    text-align: center;
+}
+
+.filter-input{
+    margin-left: 0.5%;
+}
+
+.dep-list{
+
+}
+
 .btn{
 }  
