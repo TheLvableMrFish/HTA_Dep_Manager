@@ -6,6 +6,7 @@ html, body{
 
 .content-box{
     width: 100%;
+    border: black 1px solid;
 }
 
 .dep-list-container{
