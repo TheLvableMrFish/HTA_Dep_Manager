@@ -16,29 +16,32 @@
 
 <body>
     <div>
-        <label for="filterInput">Filter:</label>
-        <input type="text" id="filterInput" onkeyup="loadFileList()" disabled>
-        <button class="btn" onclick="refreshDepList()">Reload Files</button>
+        
     </div>
     
-    <div>
-        <label class="filter-input" for="fileList">Files:</label><br/>
+    <div class="dep-container">
         <div class="dep-list-container">
-            <select class="dep-list" id="fileList" size="10" style="width: 99%;" onclick="selectFileFromList()"></select>
+            <label class="filter-input" for="fileList">Files:</label><br/>
+            <div class="dep-list">
+                <select class="dep-items" id="fileList" size="10" style="width: 99%;" onclick="selectFileFromList()"></select>
+            </div>
+        </div>
+        <div class="dep-action-container">
+            
+            <label for="filterInput">Filter:</label><br/>
+            <input type="text" id="filterInput" onkeyup="loadFileList()" disabled><br/>
+            <button class="btn" onclick="refreshDepList()">Reload Files</button><br/>
+
+            <label for="filePathInput">File Name:</label><br/>
+            <input type="text" id="filePathInput"><br/>
+
+            <button class="btn" onclick="loadFile()">Load File</button>
+            <button class="btn" onclick="saveFile()">Save File</button>
+            <button class="btn" onclick="generateNewFile()">Create New</button>
         </div>
     </div>
 
-    <div>
-        <label for="filePathInput">File Name:</label>
-        <input type="text" id="filePathInput">
-    </div>
-
-    <div>
-        <button class="btn" onclick="loadFile()">Load File</button>
-        <button class="btn" onclick="saveFile()">Save File</button>
-        <button class="btn" onclick="generateNewFile()">Create New</button>
-    </div>
-
     <textarea class="content-box" id="editor"></textarea>
+    
 </body>
 </html>

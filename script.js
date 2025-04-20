@@ -204,6 +204,10 @@ function refreshDepList(){
 function generateNewFile(){
     var fileName = document.getElementById("filePathInput").value
 
+    if(fileName === ""){
+        alert("Please enter or select a file name.")
+        return
+    }
     
     if(fileName.substring(fileName.length - 4) !== ".csv"){
         fileName += ".csv"
