@@ -25,8 +25,8 @@ html, body{
 }
 
 .content-box{
-    width: 98%;
-    margin: 1%;
+    width: 99%;
+    margin: 0.5%;
     height: 80px;
 }
 
@@ -47,4 +47,13 @@ html, body{
 }
 .btn:hover{
     cursor: pointer;
+}
+
+.dep-toggle{
+    margin-left: 0.5%;
+
+}
+
+.toggle-on{
+    background-color: gray;
 }
