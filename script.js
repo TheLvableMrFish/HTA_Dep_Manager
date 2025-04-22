@@ -239,3 +239,16 @@ function generateNewFile(){
         alert("Error saving file: " + e.message)
     }
 }
+
+function toggleMode(mode){
+    var selectBtn = document.getElementById('selectModeBtn')
+    var editBtn = document.getElementById('editModeBtn')
+
+    if(mode === 'select'){
+        selectBtn.className = 'dep-toggle toggle-on'
+        editBtn.className = 'dep-toggle toggle-off'
+    } else {
+        selectBtn.className = 'dep-toggle toggle-off'
+        editBtn.className = 'dep-toggle toggle-on'
+    }
+}
