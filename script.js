@@ -244,11 +244,18 @@ function toggleMode(mode){
     var selectBtn = document.getElementById('selectModeBtn')
     var editBtn = document.getElementById('editModeBtn')
 
+    var editMode = document.getElementById('editMode')
+    var selectMode = document.getElementById('selectMode')
+
     if(mode === 'select'){
         selectBtn.className = 'dep-toggle toggle-on'
         editBtn.className = 'dep-toggle toggle-off'
+        selectMode.className = 'select-mode'
+        editMode.className = 'edit-mode hidden'
     } else {
         selectBtn.className = 'dep-toggle toggle-off'
         editBtn.className = 'dep-toggle toggle-on'
+        editMode.className = 'edit-mode'
+        selectMode.className = 'select-mode hidden'
     }
 }
