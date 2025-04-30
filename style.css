@@ -66,3 +66,7 @@ html, body{
 .hidden{
     display: none;
 }
+
+.select-mode{
+    margin-left: 0.5%;
+}
