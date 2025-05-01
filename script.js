@@ -259,3 +259,9 @@ function toggleMode(mode){
         selectMode.className = 'select-mode hidden'
     }
 }
+
+function createTxtFile(){
+    var file = 'templates first line'
+    var optionsList = []
+    var optionsList2 = []
+}
