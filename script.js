@@ -261,6 +261,12 @@ function toggleMode(mode){
 }
 
 function createTxtFile(){
+    var option1 = document.getElementById('option1').value
+    var option2 = document.getElementById('option2').value
+    var option3 = document.getElementById('option3').value
+    var option4 = document.getElementById('option4').value
+    var option5 = document.getElementById('option5').value
+    var option6 = document.getElementById('option6').value
     var file = 'templates first line'
     var optionsList = []
     var optionsList2 = []
