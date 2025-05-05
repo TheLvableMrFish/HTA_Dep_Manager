@@ -269,5 +269,5 @@ function createTxtFile(){
     var option6 = document.getElementById('option6').value
     var file = 'templates first line'
     var firstLine = "text"
-    var optionsList1 = [option1, option2, option3, option4, option5, option6]
+    var optionsList1  = [option1, option2, option3, option4, option5, option6]
 }
