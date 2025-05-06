@@ -272,4 +272,9 @@ function createTxtFile(){
     var file = 'templates first line'
     var firstLine = "text"
     var optionsList1  = [option1, option2, option3, option4, option5, option6, option7]
+    var hasValues = false
+
+    for(var i = 0; i < optionsList1.length; i++){
+        optionsList1[i] == "" ? null : hasValues = true
+    }
 }
