@@ -47,6 +47,8 @@ html, body{
 }
 .btn:hover{
     cursor: pointer;
+    background-color: lightblue;
+    color: white;
 }
 
 .dep-toggle{
@@ -56,6 +58,8 @@ html, body{
 
 .dep-toggle:hover{
     cursor: pointer;
+    background-color: lightblue;
+    color: white;
 }
 
 .toggle-on{
