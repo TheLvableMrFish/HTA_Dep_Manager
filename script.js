@@ -96,9 +96,9 @@ function loadFile(){
 
     try{
         if(!fileSysObj.FileExists(filePath)){
-            var newFile = fileSysObj.CreateTextFile(filePath, true)
-            newFile.WriteLine("This is your new file! Edit as needed.")
-            newFile.Close()
+            // var newFile = fileSysObj.CreateTextFile(filePath, true)
+            // newFile.WriteLine("")
+            // newFile.Close()
         }
         var file = fileSysObj.OpenTextFile(filePath, 1)
         var content = ""
