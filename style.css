@@ -1,9 +1,21 @@
 *{box-sizing: border-box;}
 
+:root{
+    --bg-color-light: white;
+    --bg-color-dark: black;
+    
+    --text-color-light: black;
+    --text-color-dark: lightblue;
+}
+
 html, body{
     margin: 0;
     padding: 0;
-    background-color: ghostwhite;
+    background-color: var(--bg-color-dark);
+    color: var(--bg-color-dark);
+    background-color: black;
+    color: lightblue;
+    /* background-color: ghostwhite; */
 }
 
 .dep-container{
