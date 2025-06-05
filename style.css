@@ -13,8 +13,8 @@ html, body{
     padding: 0;
     background-color: var(--bg-color-dark);
     color: var(--bg-color-dark);
-    background-color: black;
-    color: lightblue;
+    background-color: #1E1E1E;
+    color: #CE9178;
     /* background-color: ghostwhite; */
 }
 
