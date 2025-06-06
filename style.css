@@ -51,6 +51,9 @@ html, body{
 .filter-input{
     margin-left: 0.5%;
 }
+.file-filter:hover{
+    cursor: not-allowed;
+}
 
 .dep-list{
 
