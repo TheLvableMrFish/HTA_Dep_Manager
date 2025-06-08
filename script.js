@@ -8,6 +8,9 @@ var fileSysObj = new ActiveXObject("Scripting.FileSystemObject")
 var currentDir = shell.CurrentDirectory
 var txtPath = currentDir + "\\depList.txt"
 
+// Dark mode
+var darkMode = true
+
 // Load file list from the depList.txt from the curr directory 
 window.onload = function (){
     if(!Dep_Folder_Path){
@@ -258,6 +261,19 @@ function toggleMode(mode){
         editMode.className = 'edit-mode'
         selectMode.className = 'select-mode hidden'
     }
+}
+
+function toggleDarkMode(){
+    darkMode = !darkMode
+    document.body.style.backgroundColor = darkMode ? '#1E1E1E' : 'white'
+    document.body.style.color = darkMode ? '#CE9178' : 'black'
+    document.documentElement.style.backgroundColor = darkMode ? '#1E1E1E' : 'white'
+    document.documentElement.style.color = darkMode ? '#CE9178' : 'black'
+    
+    var darkBtn = document.getElementById('dark-btn')
+    var lightBtn = document.getElementById('light-btn')
+    darkBtn.className = darkMode ? 'dark btn' : 'hidden'
+    lightBtn.className = !darkMode ? 'light btn' : 'hidden'
 }
 
 function createTxtFile(){

@@ -91,3 +91,8 @@ html, body{
 .select-mode{
     margin-left: 0.5%;
 }
+
+.light-dark-btn{
+    position: absolute;
+    right: 0;
+}
