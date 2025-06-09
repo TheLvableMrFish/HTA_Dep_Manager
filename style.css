@@ -96,3 +96,8 @@ html, body{
     position: absolute;
     right: 0;
 }
+
+.dark-mode-btn-img{
+    width: 22px;
+    aspect-ratio: 1/1;
+}
