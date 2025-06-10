@@ -284,10 +284,11 @@ function createTxtFile(){
     var option5 = document.getElementById('option5').value
     var option6 = document.getElementById('option6').value
     var option7 = document.getElementById('option7').value
+    var option8 = document.getElementById('option7').value
 
     var file = 'templates first line'
     var firstLine = "text"
-    var optionsList1  = [option1, option2, option3, option4, option5, option6, option7]
+    var optionsList1  = [option1, option2, option3, option4, option5, option6, option7, option8]
     var hasValues = false
 
     for(var i = 0; i < optionsList1.length; i++){

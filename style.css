@@ -95,9 +95,14 @@ html, body{
 .light-dark-btn{
     position: absolute;
     right: 0;
+    background-color: none;
 }
 
 .dark-mode-btn-img{
     width: 22px;
     aspect-ratio: 1/1;
+}
+
+.light, .dark{
+    align-items: center;
 }
