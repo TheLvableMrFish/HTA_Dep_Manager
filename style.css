@@ -43,6 +43,14 @@ html, body{
     margin: 0.5%;
     height: 80px;
 }
+.content-box-dark{
+    color: white;
+    background-color: black;
+}
+.content-box-light{
+    color: black;
+    background-color: white;
+}
 
 .dep-list{
     text-align: center;

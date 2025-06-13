@@ -272,8 +272,10 @@ function toggleDarkMode(){
     
     var darkBtn = document.getElementById('dark-btn')
     var lightBtn = document.getElementById('light-btn')
+    var textBox = document.getElementById('editor')
     darkBtn.className = darkMode ? 'dark btn' : 'hidden'
     lightBtn.className = !darkMode ? 'light btn' : 'hidden'
+    textBox.className = darkMode ? 'content-box content-box-dark' : 'content-box content-box-light'
 }
 
 function createTxtFile(){
