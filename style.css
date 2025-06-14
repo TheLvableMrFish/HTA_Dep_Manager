@@ -44,8 +44,9 @@ html, body{
     height: 80px;
 }
 .content-box-dark{
-    color: white;
-    background-color: black;
+
+        background-color: #1E1E1E;
+    color: #CE9178;
 }
 .content-box-light{
     color: black;
