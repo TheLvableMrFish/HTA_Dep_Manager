@@ -1,13 +1,5 @@
 *{box-sizing: border-box;}
 
-:root{
-    --bg-color-light: white;
-    --bg-color-dark: black;
-    
-    --text-color-light: black;
-    --text-color-dark: lightblue;
-}
-
 html, body{
     margin: 0;
     padding: 0;
