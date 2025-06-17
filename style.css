@@ -106,4 +106,5 @@ html, body{
 
 .light, .dark{
     align-items: center;
+    text-align: center;
 }
