@@ -97,6 +97,7 @@ html, body{
     position: absolute;
     right: 0;
     background-color: none;
+    opacity: 0.5;
 }
 
 .dark-mode-btn-img{
