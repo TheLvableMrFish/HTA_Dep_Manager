@@ -109,3 +109,8 @@ html, body{
     align-items: center;
     text-align: center;
 }
+
+.dep-items{
+    background-color: gray;
+    color: white;
+}
