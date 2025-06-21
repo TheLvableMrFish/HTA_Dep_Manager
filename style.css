@@ -110,7 +110,12 @@ html, body{
     text-align: center;
 }
 
-.dep-items{
-    background-color: gray;
+.dep-items-dark{
+    background-color: #1E1E1E;
     color: white;
+}
+
+.dep-items-light{
+    background-color: white;
+    color: black;
 }
