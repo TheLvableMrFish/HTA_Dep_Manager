@@ -119,3 +119,12 @@ html, body{
     background-color: white;
     color: black;
 }
+
+.dep-list:active{
+    background-color: lightblue;
+    color: white;
+}
+
+.dep-list:hover{
+    background-color: green;
+}
