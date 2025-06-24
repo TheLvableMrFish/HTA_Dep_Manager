@@ -54,6 +54,7 @@ html, body{
 }
 .file-filter:hover{
     cursor: not-allowed;
+    background-color: gray;
 }
 
 .dep-list{
